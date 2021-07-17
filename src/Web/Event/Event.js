@@ -1,52 +1,52 @@
 "use strict";
 
-exports.bubbles = function (e) {
+export var bubbles = function (e) {
   return e.bubbles;
 };
 
-exports.cancelable = function (e) {
+export var cancelable = function (e) {
   return e.cancelable;
 };
 
-exports._currentTarget = function (e) {
+export var _currentTarget = function (e) {
   return e.currentTarget;
 };
 
-exports.defaultPrevented = function (e) {
+export var defaultPrevented = function (e) {
   return function() {
     return e.defaultPrevented;
   };
 };
 
-exports.eventPhaseIndex = function (e) {
+export var eventPhaseIndex = function (e) {
   return e.eventPhase;
 };
 
-exports._target = function (e) {
+export var _target = function (e) {
   return e.target;
 };
 
-exports.timeStamp = function (e) {
+export var timeStamp = function (e) {
   return e.timeStamp;
 };
 
-exports.type_ = function (e) {
+export var type_ = function (e) {
   return e.type;
 };
 
-exports.preventDefault = function (e) {
+export var preventDefault = function (e) {
   return function () {
     return e.preventDefault();
   };
 };
 
-exports.stopImmediatePropagation = function (e) {
+export var stopImmediatePropagation = function (e) {
   return function () {
     return e.stopImmediatePropagation();
   };
 };
 
-exports.stopPropagation = function (e) {
+export var stopPropagation = function (e) {
   return function () {
     return e.stopPropagation();
   };

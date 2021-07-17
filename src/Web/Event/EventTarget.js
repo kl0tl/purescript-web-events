@@ -1,6 +1,6 @@
 "use strict";
 
-exports.eventListener = function (fn) {
+export var eventListener = function (fn) {
   return function () {
     return function (event) {
       return fn(event)();
@@ -8,7 +8,7 @@ exports.eventListener = function (fn) {
   };
 };
 
-exports.addEventListener = function (type) {
+export var addEventListener = function (type) {
   return function (listener) {
     return function (useCapture) {
       return function (target) {
@@ -20,7 +20,7 @@ exports.addEventListener = function (type) {
   };
 };
 
-exports.removeEventListener = function (type) {
+export var removeEventListener = function (type) {
   return function (listener) {
     return function (useCapture) {
       return function (target) {
@@ -32,7 +32,7 @@ exports.removeEventListener = function (type) {
   };
 };
 
-exports.dispatchEvent = function (event) {
+export var dispatchEvent = function (event) {
   return function (target) {
     return function () {
       return target.dispatchEvent(event);
